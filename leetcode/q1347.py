@@ -1,14 +1,10 @@
 from typing import Counter
 
 def minSteps(s: str, t: str) -> int:
-        smap = Counter(s)
-        tmap = Counter(t)
-
+        s_map = Counter(s)
+        t_map = Counter(t)
         res = 0
-
-        for i in tmap:
-            if i in smap and tmap:
-                res += abs(smap[i]-tmap[i])
-        return res//2
-
-minSteps(s="leetcode",t="practice")
+        for i in s_map:
+            if s_map[i] > t_map[i]:
+                res += abs(s_map[i] - t_map[i])
+        return res
