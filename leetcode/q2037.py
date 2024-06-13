@@ -41,3 +41,11 @@
 # In total, 1 + 3 + 0 + 0 = 4 moves were used.
 
 
+def minMovesToSeat(seats: list[int], students: list[int]) -> int:
+        seats = sorted(seats)
+        students = sorted(students)
+        res = 0
+        for i in range(len(seats)):
+            res += abs(seats[i]-students[i])
+        return res
+        
