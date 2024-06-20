@@ -1,6 +1,7 @@
 from typing import Optional
 
 
+# Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -8,13 +9,10 @@ class ListNode:
 
 class Solution:
     def hasCycle(head: Optional[ListNode]) -> bool:
-        if not head:
-            return False
-        check = set()
-        while head:
-            if head.val in check:
+        s , f = head , head
+        while f and f.next:
+            s = s.next
+            f = f.next.next
+            if s == f:
                 return True
-            else:
-                check.add(head.val)
         return False
-    hasCycle([1,2])
