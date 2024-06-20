@@ -13,8 +13,8 @@ def postorderTraversal(root: Optional[TreeNode]) -> list[int]:
         def postorder(root):
             if not root:
                 return
-            res.append(root.val)
             postorder(root.left)
             postorder(root.right)
+            res.append(root.val)
         postorder(root)
         return res
