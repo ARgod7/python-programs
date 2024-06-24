@@ -5,6 +5,25 @@ class ListNode:
         self.next = next
 
 def isPalindrome(head: Optional[ListNode]) -> bool:
+        # slow = head
+        # fast = head
+        # while fast and fast.next:
+        #     fast = fast.next.next
+        #     slow = slow.next
+        # pre = None
+        # while slow:
+        #     temp = slow.next
+        #     slow.next = pre
+        #     pre = slow
+        #     slow = temp
+
+        # l , r = head, pre
+        # while r:
+        #     if l.val != r.val:
+        #         return False
+        #     l = l.next
+        #     r = r.next
+        # return True 
         arr = []
         while head:
             arr.append(head.val)
@@ -16,5 +35,6 @@ def isPalindrome(head: Optional[ListNode]) -> bool:
             l += 1
             r -= 1
         return True
+
 isPalindrome([1,2,2,1])
         
