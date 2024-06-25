@@ -18,7 +18,7 @@
 # Input: digits = "2"
 # Output: ["a","b","c"]
 
-def letterCombinations(self, digits: str) -> List[str]:
+def letterCombinations(self, digits: str) -> list[str]:
         res = []
         mapping = { "2" : "abc",
                     "3" : "def",
