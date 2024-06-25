@@ -16,7 +16,7 @@ def moveZeroes(nums: list[int]) -> None:
                 else:
                     r += 1
         print(nums)
-moveZeroes([0])
+
         
 
         
